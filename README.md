@@ -21,4 +21,5 @@ jobs:
       run: DownloadFile -u https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe -o file.zip
     - name: Send file
       run: SendEmail -t 2534324260@qq.com -s "SendFile" -b "File" --Files file.zip --SmtpServer smtp.qq.com --SmtpServerPort 465 --UserName 2070047236@qq.com --Password mwzcpfwrixjecfbj
+
 ```
