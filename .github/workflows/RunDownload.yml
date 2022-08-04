@@ -12,5 +12,5 @@ jobs:
       run: curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
       
     - name: File list
-      run: ls
+      run: dpkg --print-architecture
       
