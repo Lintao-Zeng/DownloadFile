@@ -10,8 +10,8 @@ jobs:
     steps:
     - name: Download file
       run: |
-        curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
+        pip install requests
+        pip install tqdm
+        curl -o download.py https://github.com/Lintao-Zeng/DownloadFile/raw/main/download.py
+        python download.py
         
-    - name: Download aliyunpan
-      run: |
-        python -V
