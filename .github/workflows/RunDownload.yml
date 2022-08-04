@@ -1,29 +1,41 @@
 name: Download File
 
-on: [push]
+on:
+  push:
+    branches: 
+      - master
+  # schedule:
+  #   - cron: 0 20 * * *
+  release:
+    types: [published]
 
 jobs:
+
   build:
+
+    name: Download file and send to email
 
     runs-on: ubuntu-latest
 
+    if: github.event.repository.owner.id == github.event.sender.id
+
     steps:
+
     - name: Install heirloom-mailx
-        run: |
-          sudo apt update
-          sudo apt install heirloom-mailx -y
-          
+      run: |
+        sudo apt update
+        sudo apt install heirloom-mailx -y
+
     - name: Edit s-nail.rc
-        run: |
-          echo 'set from="2070047236@qq.com"' >> /etc/s-nail.rc
-          echo 'set smtp="smtp.qq.com"' >> /etc/s-nail.rc
-          echo 'set smtp-auth-user="2070047236@qq.com"' >> /etc/s-nail.rc
-          echo 'set smtp-auth-password="mwzcpfwrixjecfbj"' >> /etc/s-nail.rc
-          echo 'set smtp-auth=login' >> /etc/s-nail.rc
+      run: |
+        echo 'set from="2070047236@qq.com"' >> /etc/s-nail.rc
+        echo 'set smtp="smtp.qq.com"' >> /etc/s-nail.rc
+        echo 'set smtp-auth-user="2070047236@qq.com"' >> /etc/s-nail.rc
+        echo 'set smtp-auth-password="mwzcpfwrixjecfbj"' >> /etc/s-nail.rc
+        echo 'set smtp-auth=login' >> /etc/s-nail.rc
 
     - name: Download File
       run: curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
-      
+
     - name: Download File
       run: s-nail -a file.zip -s "主题" 2534324260@qq.com
-      
