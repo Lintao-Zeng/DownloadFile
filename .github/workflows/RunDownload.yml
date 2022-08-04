@@ -4,8 +4,6 @@ on:
   push:
     branches: 
       - master
-  # schedule:
-  #   - cron: 0 20 * * *
   release:
     types: [published]
 
@@ -16,8 +14,6 @@ jobs:
     name: Download file and send to email
 
     runs-on: ubuntu-latest
-
-    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
 
