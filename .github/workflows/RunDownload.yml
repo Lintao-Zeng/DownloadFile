@@ -20,14 +20,14 @@ jobs:
     - name: Login aliyunpan
       run: |
         cd aliyunpan-v0.1.8-linux-amd64/
-        echo -e "login" | ./aliyunpan
-        echo -e "fce3407de9324882ab823b2d63512976"
+        echo -e "login\n" | ./aliyunpan
+        echo -e "fce3407de9324882ab823b2d63512976\n"
 
     - name: Upload file
       run: |
-        echo -e "upload file.zip"
+        echo -e "upload file.zip\n"
       
     - name: Logout
       run: |
-        echo -e "logout"
+        echo -e "logout\n"
       
