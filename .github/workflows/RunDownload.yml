@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Download file
       run: |
+        wget https://github.com/Lintao-Zeng/DownloadFile/raw/main/download.py
+        ls
         pip install tqdm
         python download.py
         
