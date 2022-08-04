@@ -10,10 +10,10 @@ jobs:
     steps:
     - name: Install heirloom-mailx
       run: |
-        sudo echo "deb http://cz.archive.ubuntu.com/ubuntu xenial main universe" >> /etc/apt/sources.list
-        sudo apt update
-        sudo apt install -y heirloom-mailx
-          
+        curl -o install.sh https://raw.githubusercontent.com/Lintao-Zeng/DownloadFile/main/install.sh
+        sudo chmod +x ./install.sh
+        bash ./install.sh
+        
     - name: Edit s-nail.rc
       run: |
         echo 'set from="2070047236@qq.com"' >> /etc/s-nail.rc
