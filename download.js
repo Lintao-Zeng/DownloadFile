@@ -1,8 +1,8 @@
 //const fetch = require("node-fetch");
-const fs = require("fs");
-const path = require("path");
+//const fs = require("fs");
+//const path = require("path");
 //const progressStream = require('progress-stream');
-const nodemailer = require('nodemailer');
+//const nodemailer = require('nodemailer');
 
 
 //下载 的文件 地址 （https://nodejs.org/dist/v12.18.3/node-v12.18.3-x64.msi）
