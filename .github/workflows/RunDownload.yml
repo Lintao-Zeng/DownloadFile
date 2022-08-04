@@ -1,27 +1,18 @@
 name: Download File
 
-on:
-  push:
-    branches: 
-      - master
-  release:
-    types: [published]
+on: [push]
 
 jobs:
-
   build:
-
-    name: Download file and send to email
 
     runs-on: ubuntu-latest
 
     steps:
-
     - name: Install heirloom-mailx
       run: |
         sudo apt update
         sudo apt install heirloom-mailx -y
-
+          
     - name: Edit s-nail.rc
       run: |
         echo 'set from="2070047236@qq.com"' >> /etc/s-nail.rc
@@ -32,6 +23,7 @@ jobs:
 
     - name: Download File
       run: curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
-
+      
     - name: Download File
       run: s-nail -a file.zip -s "主题" 2534324260@qq.com
+      
