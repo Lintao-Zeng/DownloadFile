@@ -8,23 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install heirloom-mailx
-      run: |
-        curl -o install.sh https://raw.githubusercontent.com/Lintao-Zeng/DownloadFile/main/install.sh
-        sudo chmod 777 ./install.sh
-        bash ./install.sh
-        
-    - name: Edit s-nail.rc
-      run: |
-        echo 'set from="2070047236@qq.com"' >> /etc/s-nail.rc
-        echo 'set smtp="smtp.qq.com"' >> /etc/s-nail.rc
-        echo 'set smtp-auth-user="2070047236@qq.com"' >> /etc/s-nail.rc
-        echo 'set smtp-auth-password="mwzcpfwrixjecfbj"' >> /etc/s-nail.rc
-        echo 'set smtp-auth=login' >> /etc/s-nail.rc
-
     - name: Download File
       run: curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
       
-    - name: Download File
-      run: s-nail -a file.zip -s "主题" 2534324260@qq.com
+    - name: File list
+      run: ls
       
