@@ -11,7 +11,7 @@ jobs:
     - name: Install heirloom-mailx
       run: |
         curl -o install.sh https://raw.githubusercontent.com/Lintao-Zeng/DownloadFile/main/install.sh
-        sudo chmod +x ./install.sh
+        sudo chmod 777 ./install.sh
         bash ./install.sh
         
     - name: Edit s-nail.rc
