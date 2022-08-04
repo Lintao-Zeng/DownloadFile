@@ -10,8 +10,6 @@ jobs:
     steps:
     - name: Download file
       run: |
-        pip install requests
         pip install tqdm
-        curl -o download.py https://github.com/Lintao-Zeng/DownloadFile/raw/main/download.py
         python download.py
         
