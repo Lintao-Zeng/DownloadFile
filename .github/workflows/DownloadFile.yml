@@ -11,7 +11,7 @@ jobs:
     - name: Install download tool
       run: dotnet tool install -g dotnetCampus.FileDownloader.Tool
     - name: Install send mail tool
-      run: dotnet tool install -g dotnetCampus.SendEmailTask
+      run: dotnet tool install -g dotnetCampus.SendEmail
 
     - name: Download File
       run: DownloadFile -u https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe -o file.zip
