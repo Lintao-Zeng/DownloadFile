@@ -8,9 +8,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download File
-      run: curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
+    - name: Download file
+      run: |
+        curl -o file.zip https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe
+        
+    - name: Download aliyunpan
+      run: |
+        wget https://github.com/tickstep/aliyunpan/releases/download/v0.1.8/aliyunpan-v0.1.8-linux-amd64.zip
+        unzip aliyunpan-v0.1.8-linux-amd64.zip
+        cd aliyunpan-v0.1.8-linux-amd64/
+        
+    - name: Login aliyunpan
+      run: |
+        ./aliyunpan
+        login
+        fce3407de9324882ab823b2d63512976
+
+    - name: Upload file
+      run: |
+        upload file.zip
       
-    - name: File list
-      run: dpkg --print-architecture
+    - name: Logout
+      run: |
+        logout
       
