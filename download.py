@@ -27,7 +27,7 @@ def download(url: str, fname: str):
 
 
 
-download("https://github.com/git-for-windows/git/releases/download/v2.37.1.windows.1/Git-2.37.1-64-bit.exe", "file.exe")
+download("https://softdown01.rbread04.cn/huajunsafe/jdk17.0.1.exe?timestamp=62ec645d&auth_key=52bf262a79b0e896ac53019c85c45ea1", "file.exe")
 
 
 
