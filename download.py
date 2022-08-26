@@ -27,7 +27,7 @@ def download(url: str, fname: str):
 
 
 
-download("https://softdown01.rbread04.cn/huajunsafe/jdk17.0.1.exe?timestamp=62ec645d&auth_key=52bf262a79b0e896ac53019c85c45ea1", "file.exe")
+download("https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe", "file.exe")
 
 
 
