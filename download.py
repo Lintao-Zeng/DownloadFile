@@ -27,7 +27,7 @@ def download(url: str, fname: str):
 
 
 
-download("https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe", "file.exe")
+download("https://www.python.org/ftp/python/3.7.0/python-3.7.0-amd64.exe", "file.exe")
 
 
 
